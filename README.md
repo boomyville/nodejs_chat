@@ -57,9 +57,13 @@ Make sure your port is usable!
 
 # Troubleshooting
 
+## CORS error
+
 ![image](https://github.com/user-attachments/assets/b9a86828-763b-4fcd-a1ee-3afbe2ebda7e)
 
 This means node.js is not running (most likely)
+
+## CORS error / HTTPS 
 
 ![image](https://github.com/user-attachments/assets/6d3623a2-ebad-4d10-8491-ac5a239d1252)
 
@@ -75,5 +79,6 @@ You will also need to add your certificates
     cert: fs.readFileSync('/path/to/cert.crt')
   };
 
+## Permissions
 
 Another common issue: index.html does not have 644 permissions (chmod to fix this)
