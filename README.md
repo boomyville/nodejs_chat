@@ -1,5 +1,6 @@
 # Node.js chat
 A very simple chat interface using node.js
+![vcxsrv_mlVztdxkGR](https://github.com/user-attachments/assets/0c9c9eba-5658-4448-ae47-fa05a6fee8a7)
 
 # What does it do
 
@@ -79,6 +80,12 @@ You will also need to add your certificates
     cert: fs.readFileSync('/path/to/cert.crt')
   };
 
+## Connection issues
+![image](https://github.com/user-attachments/assets/c112544d-44a8-44aa-ade8-610bd107012c)
+
+You need to setup port forwarding to access the chat outside of your server
+
+Either load the page on your server or enable port forwarding for your node server
 ## Permissions
 
 Another common issue: index.html does not have 644 permissions (chmod to fix this)
