@@ -54,3 +54,26 @@ Open your index.html file
 CORS policy is * (should be just the domain of the server but * is foolproof)
 
 Make sure your port is usable!
+
+# Troubleshooting
+
+![image](https://github.com/user-attachments/assets/b9a86828-763b-4fcd-a1ee-3afbe2ebda7e)
+
+This means node.js is not running (most likely)
+
+![image](https://github.com/user-attachments/assets/6d3623a2-ebad-4d10-8491-ac5a239d1252)
+
+You are loading with HTTPS in URL but this project only supports HTTP so change your URL to HTTP only
+
+If you want to implement https then modify main.js to use https instead of http
+
+You will also need to add your certificates
+
+  const https = require('https');
+  const options = {
+    key: fs.readFileSync('/path/to/cert.key'),
+    cert: fs.readFileSync('/path/to/cert.crt')
+  };
+
+
+Another common issue: index.html does not have 644 permissions (chmod to fix this)
