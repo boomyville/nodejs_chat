@@ -24,7 +24,17 @@ function post_message(e){
     console.log('clicked');
     var message = document.getElementById("msg").value;
     var name_send = document.getElementById("name_in").value;
-    var params = "<b>" + name_send + "</b>" + ":" + message + "<br />";
+    let time = new Date();
+    let formattedDateTime = new Intl.DateTimeFormat('en-GB', {
+      year: '2-digit',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(time);
+    var params = "<b>" + name_send + "</b> (" + formattedDateTime + "):" + message + "<br />";
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
        console.log(this.responseText);
